@@ -1,3 +1,3 @@
-- [ ] Terminer la page d’accueil et les routes Broadway Studio
-- [ ] Remplacer les deux visuels concernés par les nouvelles versions envoyées
-- [ ] Vérifier le rendu sur toutes les largeurs demandées
+- [x] Terminer la page d’accueil et les routes Broadway Studio
+- [x] Remplacer les deux visuels concernés par les nouvelles versions envoyées
+- [x] Vérifier le rendu sur toutes les largeurs demandées
