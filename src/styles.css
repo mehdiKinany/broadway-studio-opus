@@ -5,6 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
+ * Motion tokens: one restrained timing system for reveals, images and controls.
+ * Durations stay below 900ms, except the deliberately subtle hero ambience.
  * Design system definition.
  *
  * The @theme inline block maps CSS custom properties to Tailwind utility
@@ -68,6 +70,25 @@
 }
 
 :root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.30, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.50, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --dur-micro: 150ms;
+  --dur-base: 250ms;
+  --dur-enter: 400ms;
+  --dur-reveal: 650ms;
+  --dur-image: 850ms;
+  --dur-menu-close: 200ms;
+  --dur-nav: 300ms;
+  --dur-card-rule: 350ms;
+  --dur-title: 700ms;
+  --dur-hero-image: 1600ms;
+  --delay-grid: 70ms;
+  --delay-title: 100ms;
+  --delay-hero-line: 120ms;
+  --delay-hero-copy: 200ms;
+  --delay-hero-actions: 300ms;
+  --delay-menu: 40ms;
   --radius: 0.25rem;
   --background: oklch(0.975 0.008 85);
   --foreground: oklch(0.16 0.01 80);
@@ -157,6 +178,7 @@
   html { scroll-behavior: smooth; }
   h1, h2, h3 { letter-spacing: 0; }
   a, button { -webkit-tap-highlight-color: transparent; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--color-ring); outline-offset: 3px; transition: none !important; }
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
 }
 
@@ -164,8 +186,78 @@
 @utility section-shell { width: min(100% - 2rem, 82rem); margin-inline: auto; }
 @utility fine-rule { border-color: color-mix(in oklab, var(--color-border) 70%, transparent); }
 
-@keyframes reveal-up { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@media (prefers-reduced-motion: no-preference) {
-  .reveal { animation: reveal-up 600ms ease both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
+@keyframes hero-image-enter { from { transform: scale(1.08); } to { transform: scale(1); } }
+@keyframes hero-mask-enter { from { clip-path: inset(100% 0 0 0); transform: translateY(12px); } to { clip-path: inset(0); transform: none; } }
+@keyframes hero-fade-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes route-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes menu-fade-out { from { opacity: 1; } to { opacity: 0; } }
+
+.route-transition { animation: route-fade var(--dur-base) var(--ease-out-quart) both; }
+.reveal-block.is-reveal-ready { opacity: 0; transform: translateY(24px); will-change: transform, opacity; }
+.reveal-block.is-reveal-ready.is-visible { opacity: 1; transform: none; transition: opacity var(--dur-reveal) var(--ease-out-expo), transform var(--dur-reveal) var(--ease-out-expo); will-change: auto; }
+.masked-title > span { display: block; }
+.masked-title.is-reveal-ready > span { clip-path: inset(100% 0 0 0); transform: translateY(12px); will-change: transform, clip-path; }
+.masked-title.is-reveal-ready.is-visible > span { clip-path: inset(0); transform: none; transition: clip-path var(--dur-title) var(--ease-out-expo), transform var(--dur-title) var(--ease-out-expo); will-change: auto; }
+.image-reveal.is-reveal-ready { clip-path: inset(0 0 100% 0); will-change: clip-path; }
+.image-reveal.is-reveal-ready > img { transform: scale(1.06); will-change: transform; }
+.image-reveal.is-reveal-ready.is-visible { clip-path: inset(0); transition: clip-path var(--dur-image) var(--ease-out-expo); }
+.image-reveal.is-reveal-ready.is-visible > img { transform: scale(1); transition: transform var(--dur-image) var(--ease-out-expo); will-change: auto; }
+.reveal-delay-1 { transition-delay: calc(var(--delay-grid) * 1) !important; }
+.reveal-delay-2 { transition-delay: calc(var(--delay-grid) * 2) !important; }
+.reveal-delay-3 { transition-delay: calc(var(--delay-grid) * 3) !important; }
+.reveal-delay-4 { transition-delay: calc(var(--delay-grid) * 4) !important; }
+.reveal-delay-5 { transition-delay: calc(var(--delay-grid) * 5) !important; }
+.reveal-delay-6 { transition-delay: calc(var(--delay-grid) * 6) !important; }
+.masked-title .reveal-delay-1 { transition-delay: var(--delay-title) !important; }
+.masked-title .reveal-delay-2 { transition-delay: calc(var(--delay-title) * 2) !important; }
+.motion-link { text-decoration: none; background-image: linear-gradient(currentColor, currentColor); background-position: left bottom; background-repeat: no-repeat; background-size: 0% 1px; transition: background-size var(--dur-nav) var(--ease-out-quart), color var(--dur-base) var(--ease-out-quart); }
+.motion-link:hover { background-size: 100% 1px; }
+.motion-button { transition: color var(--dur-micro) var(--ease-out-quart), background-color var(--dur-micro) var(--ease-out-quart), border-color var(--dur-micro) var(--ease-out-quart), opacity var(--dur-micro) var(--ease-out-quart), transform var(--dur-micro) var(--ease-out-quart); }
+.motion-button:active { transform: scale(.98); }
+.motion-button:hover svg { transform: translateX(3px); transition: transform var(--dur-micro) var(--ease-out-quart); }
+.hero-image { animation: hero-image-enter var(--dur-hero-image) var(--ease-out-expo) both; }
+.hero-title-line { display: block; animation: hero-mask-enter var(--dur-title) var(--ease-out-expo) both; }
+.hero-title-line + .hero-title-line { animation-delay: var(--delay-hero-line); }
+.hero-subtitle { animation: hero-fade-enter var(--dur-enter) var(--ease-out-expo) var(--delay-hero-copy) both; }
+.hero-actions { animation: hero-fade-enter var(--dur-enter) var(--ease-out-expo) var(--delay-hero-actions) both; }
+.discipline-card-media { transform: scale(1); transition: transform var(--dur-image) var(--ease-out-quart); }
+.discipline-card-overlay { opacity: .55; transition: opacity var(--dur-base) var(--ease-out-quart); }
+.discipline-card-name { transition: transform var(--dur-base) var(--ease-out-quart); }
+.discipline-card-rule { transform: scaleX(0); transform-origin: left; transition: transform var(--dur-card-rule) var(--ease-out-quart); }
+.mobile-menu-backdrop { animation: route-fade var(--dur-base) var(--ease-in-out-quart) both; }
+.mobile-menu-item { opacity: 0; transform: translateY(16px); animation: hero-fade-enter var(--dur-enter) var(--ease-out-expo) forwards; }
+.menu-delay-1 { animation-delay: calc(var(--delay-menu) * 1); }
+.menu-delay-2 { animation-delay: calc(var(--delay-menu) * 2); }
+.menu-delay-3 { animation-delay: calc(var(--delay-menu) * 3); }
+.menu-delay-4 { animation-delay: calc(var(--delay-menu) * 4); }
+.menu-delay-5 { animation-delay: calc(var(--delay-menu) * 5); }
+.menu-delay-6 { animation-delay: calc(var(--delay-menu) * 6); }
+.menu-delay-7 { animation-delay: calc(var(--delay-menu) * 7); }
+.menu-delay-8 { animation-delay: calc(var(--delay-menu) * 8); }
+.menu-delay-9 { animation-delay: calc(var(--delay-menu) * 9); }
+.menu-delay-10 { animation-delay: calc(var(--delay-menu) * 10); }
+.menu-delay-11 { animation-delay: calc(var(--delay-menu) * 11); }
+.menu-delay-12 { animation-delay: calc(var(--delay-menu) * 12); }
+.mobile-menu-closing { animation: menu-fade-out var(--dur-menu-close) var(--ease-in-out-quart) both; }
+.mobile-menu-closing .mobile-menu-item { animation: none; opacity: 1; transform: none; }
+.site-header { transition: background-color var(--dur-nav) var(--ease-out-quart), border-color var(--dur-nav) var(--ease-out-quart); }
+.site-header-inner { transition: transform var(--dur-nav) var(--ease-out-quart); }
+.site-header.is-compact .site-header-inner { transform: scaleY(.773); }
+.site-header.is-compact .site-header-inner > * { transform: scaleY(1.294); transition: transform var(--dur-nav) var(--ease-out-quart); }
+.testimonial-enter { animation: hero-fade-enter var(--dur-enter) var(--ease-out-quart) both; }
+.testimonial-snap { scrollbar-width: none; }
+.testimonial-snap::-webkit-scrollbar { display: none; }
+@media (min-width: 1024px) { .hero-parallax { transform: translate3d(0, var(--parallax-y, 0), 0); } }
+
+@media (hover: hover) and (pointer: fine) {
+  .discipline-card:hover .discipline-card-media { transform: scale(1.04); }
+  .discipline-card:hover .discipline-card-overlay { opacity: .35; }
+  .discipline-card:hover .discipline-card-name { transform: translateY(-4px); }
+  .discipline-card:hover .discipline-card-rule { transform: scaleX(1); }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-property: opacity, color, background-color, border-color !important; transition-duration: var(--dur-micro) !important; transform: none !important; clip-path: none !important; scroll-behavior: auto !important; }
+  .reveal-block, .masked-title > span, .image-reveal, .mobile-menu-item, .hero-subtitle, .hero-actions { opacity: 1 !important; }
+}

@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -20,7 +21,7 @@ import { Button } from "@/components/ui/button";
 function NotFoundComponent() {
   const t = useT();
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">{t.notFound.title}</h2>
@@ -49,7 +50,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-xl font-semibold tracking-tight text-foreground">
           {t.error.title}
@@ -120,11 +121,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <Outlet />
+       <div key={pathname} className="route-transition"><Outlet /></div>
       <SiteFooter />
       <MobileActionBar />
     </QueryClientProvider>
