@@ -3,3 +3,8 @@
 - [x] Brancher les photos sur l’accueil et les cinq pages concernées
 - [x] Appliquer le système de motion global
 - [x] Vérifier accessibilité, mobile et performances
+- [ ] Intégrer le planning officiel 2026-2027 et actualiser les disciplines
+- [ ] Construire la page Planning mobile-first avec filtres cumulables
+- [ ] Construire la page Événements avec statuts automatiques et données structurées
+- [ ] Corriger le bandeau et vérifier les cinq cartes photographiques
+- [ ] Valider les deux pages sur mobile et bureau
