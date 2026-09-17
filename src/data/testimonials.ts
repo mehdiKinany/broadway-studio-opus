@@ -1,0 +1,9 @@
+export const testimonials = [
+  { text: "Ma fille est inscrite à BROADWAY depuis 2022 en danse classique et judo. Le corps professoral est excellent et à l’écoute des enfants et des demandes des parents. Je suis à 100 % satisfait. La qualité des activités, des professeurs et du staff. Les spectacles de fin d’année sont excellents et aux petits soins pour nos enfants." },
+  { text: "Merci pour cette excellente année à BROADWAY. J’ai pu apprendre énormément de techniques et d’astuces m’ayant permis d’améliorer mon niveau de dessin. Ce fut une très bonne expérience. J’ai fait d’incroyables rencontres. Je recommande vivement BROADWAY !", attribution: "student" },
+  { text: "La qualité des enseignants est de haut niveau. L’organisation et la logistique sont parfaites, avec une très bonne communication. De grands progrès ont été relevés pour ma fille, avec beaucoup de plaisir et d’épanouissement pendant les cours." },
+  { text: "Depuis leur inscription à BROADWAY, nous avons noté une excellente adhésion aux activités, un épanouissement et un réel apport en matière de discipline. On remercie le staff pour son engagement, sa disponibilité et son professionnalisme." },
+  { text: "Très satisfait. Rigueur et sécurité. Communication claire. Je compte réinscrire ma fille. Merci pour la qualité du service." },
+  { text: "On s’est régalé à ce beau spectacle ! C’est du travail de qualité et les costumes sont topissimes. Bravo à toute l’équipe de Broadway." },
+  { text: "Nous tenons à remercier BROADWAY pour son excellent travail et pour les efforts fournis auprès des enfants. Nous sentons un épanouissement et une prise de confiance. Un grand bravo au coach pour sa pédagogie." },
+] as const;
