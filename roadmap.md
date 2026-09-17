@@ -1,0 +1,3 @@
+- [ ] Terminer la page d’accueil et les routes Broadway Studio
+- [ ] Remplacer les deux visuels concernés par les nouvelles versions envoyées
+- [ ] Vérifier le rendu sur toutes les largeurs demandées
