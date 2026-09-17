@@ -1,3 +1,5 @@
-- [x] Terminer la page d’accueil et les routes Broadway Studio
-- [x] Remplacer les deux visuels concernés par les nouvelles versions envoyées
-- [x] Vérifier le rendu sur toutes les largeurs demandées
+- [x] Supprimer définitivement les deux visuels artificiels
+- [x] Importer les dix photographies réelles fournies
+- [ ] Brancher les photos sur l’accueil et les cinq pages concernées
+- [ ] Appliquer le système de motion global
+- [ ] Vérifier accessibilité, mobile et performances
