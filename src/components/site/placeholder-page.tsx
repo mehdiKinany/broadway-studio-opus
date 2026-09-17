@@ -1,0 +1,5 @@
+import { Link } from "@tanstack/react-router";
+import { ArrowLeft } from "lucide-react";
+import { useT } from "@/hooks/use-t";
+
+export function PlaceholderPage({ title }: { title: string }) { const t = useT(); return <main className="min-h-[70vh] bg-background px-4 pb-24 pt-40"><div className="section-shell"><p className="text-xs font-semibold uppercase text-primary">{t.brand.name}</p><h1 className="editorial-title mt-6 max-w-4xl text-6xl text-foreground sm:text-7xl lg:text-8xl">{title}</h1><div className="mt-10 max-w-xl border-t fine-rule pt-7"><p className="text-muted-foreground">{t.pages.intro}</p><Link to="/" className="mt-8 inline-flex min-h-11 items-center gap-2 text-sm font-semibold uppercase hover:text-primary"><ArrowLeft className="size-4" />{t.pages.back}</Link></div></div></main>; }

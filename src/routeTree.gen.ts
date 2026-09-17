@@ -10,33 +10,245 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AnniversairesRouteImport } from './routes/anniversaires'
+import { Route as ArtsMartiauxRouteImport } from './routes/arts-martiaux'
+import { Route as ArtsPlastiquesRouteImport } from './routes/arts-plastiques'
+import { Route as ChantRouteImport } from './routes/chant'
+import { Route as CheerleadingRouteImport } from './routes/cheerleading'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DanseRouteImport } from './routes/danse'
+import { Route as DemandeDinformationsRouteImport } from './routes/demande-dinformations'
+import { Route as EvenementsRouteImport } from './routes/evenements'
+import { Route as FitnessRouteImport } from './routes/fitness'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as GymnastiqueRouteImport } from './routes/gymnastique'
+import { Route as MusiqueRouteImport } from './routes/musique'
+import { Route as PlanningRouteImport } from './routes/planning'
+import { Route as QuiSommesNousRouteImport } from './routes/qui-sommes-nous'
+import { Route as TheatreRouteImport } from './routes/theatre'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AnniversairesRoute = AnniversairesRouteImport.update({
+  id: '/anniversaires',
+  path: '/anniversaires',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtsMartiauxRoute = ArtsMartiauxRouteImport.update({
+  id: '/arts-martiaux',
+  path: '/arts-martiaux',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ArtsPlastiquesRoute = ArtsPlastiquesRouteImport.update({
+  id: '/arts-plastiques',
+  path: '/arts-plastiques',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChantRoute = ChantRouteImport.update({
+  id: '/chant',
+  path: '/chant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheerleadingRoute = CheerleadingRouteImport.update({
+  id: '/cheerleading',
+  path: '/cheerleading',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DanseRoute = DanseRouteImport.update({
+  id: '/danse',
+  path: '/danse',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DemandeDinformationsRoute = DemandeDinformationsRouteImport.update({
+  id: '/demande-dinformations',
+  path: '/demande-dinformations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvenementsRoute = EvenementsRouteImport.update({
+  id: '/evenements',
+  path: '/evenements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FitnessRoute = FitnessRouteImport.update({
+  id: '/fitness',
+  path: '/fitness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GymnastiqueRoute = GymnastiqueRouteImport.update({
+  id: '/gymnastique',
+  path: '/gymnastique',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MusiqueRoute = MusiqueRouteImport.update({
+  id: '/musique',
+  path: '/musique',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanningRoute = PlanningRouteImport.update({
+  id: '/planning',
+  path: '/planning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuiSommesNousRoute = QuiSommesNousRouteImport.update({
+  id: '/qui-sommes-nous',
+  path: '/qui-sommes-nous',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TheatreRoute = TheatreRouteImport.update({
+  id: '/theatre',
+  path: '/theatre',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/anniversaires': typeof AnniversairesRoute
+  '/arts-martiaux': typeof ArtsMartiauxRoute
+  '/arts-plastiques': typeof ArtsPlastiquesRoute
+  '/chant': typeof ChantRoute
+  '/cheerleading': typeof CheerleadingRoute
+  '/contact': typeof ContactRoute
+  '/danse': typeof DanseRoute
+  '/demande-dinformations': typeof DemandeDinformationsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/gymnastique': typeof GymnastiqueRoute
+  '/musique': typeof MusiqueRoute
+  '/planning': typeof PlanningRoute
+  '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/theatre': typeof TheatreRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/anniversaires': typeof AnniversairesRoute
+  '/arts-martiaux': typeof ArtsMartiauxRoute
+  '/arts-plastiques': typeof ArtsPlastiquesRoute
+  '/chant': typeof ChantRoute
+  '/cheerleading': typeof CheerleadingRoute
+  '/contact': typeof ContactRoute
+  '/danse': typeof DanseRoute
+  '/demande-dinformations': typeof DemandeDinformationsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/gymnastique': typeof GymnastiqueRoute
+  '/musique': typeof MusiqueRoute
+  '/planning': typeof PlanningRoute
+  '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/theatre': typeof TheatreRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/anniversaires': typeof AnniversairesRoute
+  '/arts-martiaux': typeof ArtsMartiauxRoute
+  '/arts-plastiques': typeof ArtsPlastiquesRoute
+  '/chant': typeof ChantRoute
+  '/cheerleading': typeof CheerleadingRoute
+  '/contact': typeof ContactRoute
+  '/danse': typeof DanseRoute
+  '/demande-dinformations': typeof DemandeDinformationsRoute
+  '/evenements': typeof EvenementsRoute
+  '/fitness': typeof FitnessRoute
+  '/gallery': typeof GalleryRoute
+  '/gymnastique': typeof GymnastiqueRoute
+  '/musique': typeof MusiqueRoute
+  '/planning': typeof PlanningRoute
+  '/qui-sommes-nous': typeof QuiSommesNousRoute
+  '/theatre': typeof TheatreRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/anniversaires'
+    | '/arts-martiaux'
+    | '/arts-plastiques'
+    | '/chant'
+    | '/cheerleading'
+    | '/contact'
+    | '/danse'
+    | '/demande-dinformations'
+    | '/evenements'
+    | '/fitness'
+    | '/gallery'
+    | '/gymnastique'
+    | '/musique'
+    | '/planning'
+    | '/qui-sommes-nous'
+    | '/theatre'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/anniversaires'
+    | '/arts-martiaux'
+    | '/arts-plastiques'
+    | '/chant'
+    | '/cheerleading'
+    | '/contact'
+    | '/danse'
+    | '/demande-dinformations'
+    | '/evenements'
+    | '/fitness'
+    | '/gallery'
+    | '/gymnastique'
+    | '/musique'
+    | '/planning'
+    | '/qui-sommes-nous'
+    | '/theatre'
+  id:
+    | '__root__'
+    | '/'
+    | '/anniversaires'
+    | '/arts-martiaux'
+    | '/arts-plastiques'
+    | '/chant'
+    | '/cheerleading'
+    | '/contact'
+    | '/danse'
+    | '/demande-dinformations'
+    | '/evenements'
+    | '/fitness'
+    | '/gallery'
+    | '/gymnastique'
+    | '/musique'
+    | '/planning'
+    | '/qui-sommes-nous'
+    | '/theatre'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnniversairesRoute: typeof AnniversairesRoute
+  ArtsMartiauxRoute: typeof ArtsMartiauxRoute
+  ArtsPlastiquesRoute: typeof ArtsPlastiquesRoute
+  ChantRoute: typeof ChantRoute
+  CheerleadingRoute: typeof CheerleadingRoute
+  ContactRoute: typeof ContactRoute
+  DanseRoute: typeof DanseRoute
+  DemandeDinformationsRoute: typeof DemandeDinformationsRoute
+  EvenementsRoute: typeof EvenementsRoute
+  FitnessRoute: typeof FitnessRoute
+  GalleryRoute: typeof GalleryRoute
+  GymnastiqueRoute: typeof GymnastiqueRoute
+  MusiqueRoute: typeof MusiqueRoute
+  PlanningRoute: typeof PlanningRoute
+  QuiSommesNousRoute: typeof QuiSommesNousRoute
+  TheatreRoute: typeof TheatreRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +260,139 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/anniversaires': {
+      id: '/anniversaires'
+      path: '/anniversaires'
+      fullPath: '/anniversaires'
+      preLoaderRoute: typeof AnniversairesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arts-martiaux': {
+      id: '/arts-martiaux'
+      path: '/arts-martiaux'
+      fullPath: '/arts-martiaux'
+      preLoaderRoute: typeof ArtsMartiauxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/arts-plastiques': {
+      id: '/arts-plastiques'
+      path: '/arts-plastiques'
+      fullPath: '/arts-plastiques'
+      preLoaderRoute: typeof ArtsPlastiquesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chant': {
+      id: '/chant'
+      path: '/chant'
+      fullPath: '/chant'
+      preLoaderRoute: typeof ChantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cheerleading': {
+      id: '/cheerleading'
+      path: '/cheerleading'
+      fullPath: '/cheerleading'
+      preLoaderRoute: typeof CheerleadingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/danse': {
+      id: '/danse'
+      path: '/danse'
+      fullPath: '/danse'
+      preLoaderRoute: typeof DanseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/demande-dinformations': {
+      id: '/demande-dinformations'
+      path: '/demande-dinformations'
+      fullPath: '/demande-dinformations'
+      preLoaderRoute: typeof DemandeDinformationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evenements': {
+      id: '/evenements'
+      path: '/evenements'
+      fullPath: '/evenements'
+      preLoaderRoute: typeof EvenementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fitness': {
+      id: '/fitness'
+      path: '/fitness'
+      fullPath: '/fitness'
+      preLoaderRoute: typeof FitnessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gymnastique': {
+      id: '/gymnastique'
+      path: '/gymnastique'
+      fullPath: '/gymnastique'
+      preLoaderRoute: typeof GymnastiqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/musique': {
+      id: '/musique'
+      path: '/musique'
+      fullPath: '/musique'
+      preLoaderRoute: typeof MusiqueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/planning': {
+      id: '/planning'
+      path: '/planning'
+      fullPath: '/planning'
+      preLoaderRoute: typeof PlanningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/qui-sommes-nous': {
+      id: '/qui-sommes-nous'
+      path: '/qui-sommes-nous'
+      fullPath: '/qui-sommes-nous'
+      preLoaderRoute: typeof QuiSommesNousRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/theatre': {
+      id: '/theatre'
+      path: '/theatre'
+      fullPath: '/theatre'
+      preLoaderRoute: typeof TheatreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnniversairesRoute: AnniversairesRoute,
+  ArtsMartiauxRoute: ArtsMartiauxRoute,
+  ArtsPlastiquesRoute: ArtsPlastiquesRoute,
+  ChantRoute: ChantRoute,
+  CheerleadingRoute: CheerleadingRoute,
+  ContactRoute: ContactRoute,
+  DanseRoute: DanseRoute,
+  DemandeDinformationsRoute: DemandeDinformationsRoute,
+  EvenementsRoute: EvenementsRoute,
+  FitnessRoute: FitnessRoute,
+  GalleryRoute: GalleryRoute,
+  GymnastiqueRoute: GymnastiqueRoute,
+  MusiqueRoute: MusiqueRoute,
+  PlanningRoute: PlanningRoute,
+  QuiSommesNousRoute: QuiSommesNousRoute,
+  TheatreRoute: TheatreRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
