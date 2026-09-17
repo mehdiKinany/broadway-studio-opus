@@ -18,7 +18,7 @@ const SectionLabel = ({ children }: { children: string }) => <p className="text-
 export function HomePage() {
   const t = useT();
   const [quote, setQuote] = useState(0);
-  const heroImageRef = useRef<HTMLImageElement>(null);
+  const heroImageRef = useRef<HTMLDivElement>(null);
   const currentTestimonial = testimonials[quote] ?? testimonials[0];
   const status = getOpenStatus();
   const universeItems = disciplines;
@@ -38,7 +38,7 @@ export function HomePage() {
   }, []);
   return <main>
     <section className="relative flex min-h-[92svh] items-end overflow-hidden bg-surface-deep pb-14 pt-32 text-hero-foreground sm:pb-20 lg:min-h-[94svh] lg:pb-24">
-      <img ref={heroImageRef} src={heroAsset.url} alt={t.hero.imageAlt} className="hero-image absolute inset-0 size-full object-cover" />
+      <div ref={heroImageRef} className="hero-parallax absolute inset-0"><img src={heroAsset.url} alt={t.hero.imageAlt} className="hero-image size-full object-cover" /></div>
       <div className="absolute inset-0 bg-surface-deep/65" />
       <div className="section-shell relative z-10">
         <p className="mb-5 text-xs font-semibold uppercase text-primary">{site.baseline}</p>
