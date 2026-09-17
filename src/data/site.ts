@@ -38,8 +38,8 @@ export function getOpenStatus(now = new Date()) {
   const current = hour * 60 + minute;
   const today = site.hours.find((item) => item.dayIndex === dayIndex);
   const isOpen = today?.slots.some((slot) => {
-    const [startHour, startMinute] = slot.start.split(":").map(Number);
-    const [endHour, endMinute] = slot.end.split(":").map(Number);
+    const [startHour = 0, startMinute = 0] = slot.start.split(":").map(Number);
+    const [endHour = 0, endMinute = 0] = slot.end.split(":").map(Number);
     return current >= startHour * 60 + startMinute && current < endHour * 60 + endMinute;
   }) ?? false;
   return { isOpen, today };
