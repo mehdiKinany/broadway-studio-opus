@@ -1,4 +1,5 @@
-export const testimonials = [
+export type Testimonial = { text: string; attribution?: "student" };
+export const testimonials: Testimonial[] = [
   { text: "Ma fille est inscrite à BROADWAY depuis 2022 en danse classique et judo. Le corps professoral est excellent et à l’écoute des enfants et des demandes des parents. Je suis à 100 % satisfait. La qualité des activités, des professeurs et du staff. Les spectacles de fin d’année sont excellents et aux petits soins pour nos enfants." },
   { text: "Merci pour cette excellente année à BROADWAY. J’ai pu apprendre énormément de techniques et d’astuces m’ayant permis d’améliorer mon niveau de dessin. Ce fut une très bonne expérience. J’ai fait d’incroyables rencontres. Je recommande vivement BROADWAY !", attribution: "student" },
   { text: "La qualité des enseignants est de haut niveau. L’organisation et la logistique sont parfaites, avec une très bonne communication. De grands progrès ont été relevés pour ma fille, avec beaucoup de plaisir et d’épanouissement pendant les cours." },
