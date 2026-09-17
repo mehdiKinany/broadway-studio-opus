@@ -19,7 +19,7 @@ export const fr = {
     disciplines: "Musique, chant, danse, théâtre, échecs, arts visuels, arts martiaux et gymnastique.",
     imageAlt: "Affiche des Journées Portes Ouvertes Broadway Studio des 19 et 20 septembre 2026",
   },
-  disciplines: { eyebrow: "Les univers", title: "EXPLOREZ VOTRE PASSION", discover: "Découvrir", placeholder: "Visuel à venir" },
+  disciplines: { eyebrow: "Les univers", title: "EXPLOREZ VOTRE PASSION", discover: "Découvrir", placeholder: "Visuel à venir", program: "Pratiques proposées" },
   audiences: {
     eyebrow: "À chacun son parcours", title: "UNE PRATIQUE POUR CHAQUE ÉLAN.",
     items: ["Enfants", "Adolescents", "Adultes", "Seniors"], discover: "Explorer les disciplines",
@@ -27,7 +27,7 @@ export const fr = {
   about: {
     eyebrow: "Broadway Studio", title: "PLUS QU’UN STUDIO, UN LIEU POUR S’EXPRIMER.",
     text: "Centre d’éveil artistique et sportif de la Ville Verte, Broadway Studio accueille depuis 2022 les enfants, les adolescents, les adultes et les seniors. Son équipe pédagogique qualifiée cultive une approche fondée sur le plaisir de s’exprimer, la confiance et le développement personnel. Pensé autour des activités artistiques et sportives, le site offre un cadre architectural contemporain où chacun peut découvrir une discipline, progresser et révéler son potentiel.",
-    link: "Découvrir le studio", imageAlt: "Espace d’accueil intérieur de Broadway Studio",
+    link: "Découvrir le studio", imageAlt: "Enseigne lumineuse Broadway Studio dans les locaux de Ville Verte",
   },
   schedule: {
     eyebrow: "Cette semaine", title: "LE STUDIO VOUS ACCUEILLE.", subtitle: "Horaires d’ouverture",
@@ -52,6 +52,24 @@ export const fr = {
     rights: "Tous droits réservés.",
   },
   mobileBar: { planning: "Planning", call: "Appeler", info: "Infos" },
+  media: {
+    musique: [
+      { alt: "Enfant jouant sur un piano acoustique pendant un cours à Broadway Studio", caption: "Cours de piano acoustique à Broadway Studio" },
+      { alt: "Deux élèves et leur professeur pendant un cours collectif de guitare dans la salle de musique", caption: "Cours collectif de guitare dans la salle de musique" },
+      { alt: "Professeur installé à la batterie dans la salle de musique ornée du logo Broadway Studio", caption: "Cours de batterie dans la salle de musique" },
+    ],
+    danse: [{ alt: "Professeure accompagnant deux jeunes enfants pendant un cours d’éveil danse devant le logo Broadway Studio", caption: "Éveil danse dans le studio Broadway" }],
+    gymnastique: [
+      { alt: "Enfants réalisant un exercice de gymnastique sportive sur le tatami avec leur professeur", caption: "Cours de gymnastique sportive sur tatami" },
+      { alt: "Jeunes gymnastes pratiquant avec des cerceaux dans une salle équipée de barres", caption: "Gymnastique rythmique aux cerceaux" },
+    ],
+    "arts-martiaux": [
+      { alt: "Professeur et jeunes élèves de judo saluant sur le tatami Broadway Studio", caption: "Cours de judo sur le tatami Broadway Studio" },
+      { alt: "Deux pratiquants en tenue blanche pendant un exercice sur un tapis jaune devant le logo Broadway Studio", caption: "Cours d’arts martiaux à Broadway Studio" },
+      { alt: "Enfant travaillant un coup de pied de kick-boxing avec son coach", caption: "Cours de kick-boxing avec un coach" },
+    ],
+    theatre: [{ alt: "Troupe d’enfants en costume jouant ensemble sur une scène de théâtre", caption: "Jeunes comédiens en représentation sur scène" }],
+  },
   pages: {
     intro: "Cette page sera développée prochainement.", back: "Retour à l’accueil",
     titles: {

@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { PlaceholderPage } from "@/components/site/placeholder-page";
-import { useT } from "@/hooks/use-t";
+import { DisciplinePage } from "@/components/site/discipline-page";
 
 export const Route = createFileRoute("/arts-martiaux")({
   head: () => ({ meta: [{ title: "Arts Martiaux — Broadway Studio" }, { name: "description", content: "Découvrez arts martiaux à Broadway Studio, centre artistique et sportif à Ville Verte, Bouskoura." }, { property: "og:title", content: "Arts Martiaux — Broadway Studio" }, { property: "og:description", content: "Découvrez arts martiaux à Broadway Studio, Ville Verte, Bouskoura." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary_large_image" }], links: [{ rel: "canonical", href: "/arts-martiaux" }] }),
   component: Page,
 });
-function Page() { const t = useT(); return <PlaceholderPage title={t.pages.titles.martial} />; }
+function Page() { return <DisciplinePage slug="arts-martiaux" />; }

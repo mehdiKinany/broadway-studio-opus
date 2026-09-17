@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export function useReveal<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [visible, setVisible] = useState(false);
+  const [active, setActive] = useState(false);
 
   useEffect(() => {
     const element = ref.current;
@@ -11,6 +12,7 @@ export function useReveal<T extends HTMLElement>() {
       setVisible(true);
       return;
     }
+    setActive(true);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry?.isIntersecting) return;
@@ -23,5 +25,5 @@ export function useReveal<T extends HTMLElement>() {
     return () => observer.disconnect();
   }, []);
 
-  return { ref, visible };
+  return { ref, visible, active };
 }
