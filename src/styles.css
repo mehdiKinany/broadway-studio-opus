@@ -214,6 +214,14 @@
 .mobile-menu-backdrop { animation: route-fade var(--dur-base) var(--ease-in-out-quart) both; }
 .mobile-menu-item { opacity: 0; transform: translateY(16px); animation: hero-fade-enter var(--dur-enter) var(--ease-out-expo) forwards; }
 .mobile-menu-closing { animation-duration: 200ms; }
+.site-header { transition: background-color 300ms var(--ease-out-quart), border-color 300ms var(--ease-out-quart); }
+.site-header-inner { transition: transform 300ms var(--ease-out-quart); }
+.site-header.is-compact .site-header-inner { transform: scaleY(.773); }
+.site-header.is-compact .site-header-inner > * { transform: scaleY(1.294); transition: transform 300ms var(--ease-out-quart); }
+.testimonial-enter { animation: hero-fade-enter var(--dur-enter) var(--ease-out-quart) both; }
+.testimonial-snap { scrollbar-width: none; }
+.testimonial-snap::-webkit-scrollbar { display: none; }
+@media (min-width: 1024px) { .hero-image { transform: translate3d(0, var(--parallax-y, 0), 0) scale(1.08); } }
 
 @media (hover: hover) and (pointer: fine) {
   .discipline-card:hover .discipline-card-media { transform: scale(1.04); }

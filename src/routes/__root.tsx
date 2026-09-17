@@ -4,6 +4,7 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useRouterState,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
@@ -120,11 +121,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+
+  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-      <Outlet />
+       <div key={pathname} className="route-transition"><Outlet /></div>
       <SiteFooter />
       <MobileActionBar />
     </QueryClientProvider>
