@@ -62,6 +62,7 @@ export const fr = {
     },
   },
   notFound: { title: "PAGE INTROUVABLE", text: "La page que vous recherchez n’existe pas ou a été déplacée.", back: "Revenir à l’accueil" },
+  error: { title: "Cette page n’a pas pu être chargée", text: "Une erreur est survenue. Vous pouvez réessayer ou revenir à l’accueil.", retry: "Réessayer", home: "Accueil" },
 } as const;
 
 export type Translation = typeof fr;
