@@ -27,7 +27,7 @@ export const fr = {
   about: {
     eyebrow: "Broadway Studio", title: "PLUS QU’UN STUDIO, UN LIEU POUR S’EXPRIMER.",
     text: "Centre d’éveil artistique et sportif de la Ville Verte, Broadway Studio accueille depuis 2022 les enfants, les adolescents, les adultes et les seniors. Son équipe pédagogique qualifiée cultive une approche fondée sur le plaisir de s’exprimer, la confiance et le développement personnel. Pensé autour des activités artistiques et sportives, le site offre un cadre architectural contemporain où chacun peut découvrir une discipline, progresser et révéler son potentiel.",
-    link: "Découvrir le studio", imageAlt: "Enseigne Broadway Studio à l’intérieur du centre",
+    link: "Découvrir le studio", imageAlt: "Espace d’accueil intérieur de Broadway Studio",
   },
   schedule: {
     eyebrow: "Cette semaine", title: "LE STUDIO VOUS ACCUEILLE.", subtitle: "Horaires d’ouverture",
