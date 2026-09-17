@@ -88,6 +88,7 @@
   --delay-hero-line: 120ms;
   --delay-hero-copy: 200ms;
   --delay-hero-actions: 300ms;
+  --delay-menu: 40ms;
   --radius: 0.25rem;
   --background: oklch(0.975 0.008 85);
   --foreground: oklch(0.16 0.01 80);
@@ -177,6 +178,7 @@
   html { scroll-behavior: smooth; }
   h1, h2, h3 { letter-spacing: 0; }
   a, button { -webkit-tap-highlight-color: transparent; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--color-ring); outline-offset: 3px; transition: none !important; }
   ::selection { background: var(--color-primary); color: var(--color-primary-foreground); }
 }
 
@@ -188,6 +190,7 @@
 @keyframes hero-mask-enter { from { clip-path: inset(100% 0 0 0); transform: translateY(12px); } to { clip-path: inset(0); transform: none; } }
 @keyframes hero-fade-enter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
 @keyframes route-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes menu-fade-out { from { opacity: 1; } to { opacity: 0; } }
 
 .route-transition { animation: route-fade var(--dur-base) var(--ease-out-quart) both; }
 .reveal-block.is-reveal-ready { opacity: 0; transform: translateY(24px); will-change: transform, opacity; }
@@ -223,7 +226,20 @@
 .discipline-card-rule { transform: scaleX(0); transform-origin: left; transition: transform var(--dur-card-rule) var(--ease-out-quart); }
 .mobile-menu-backdrop { animation: route-fade var(--dur-base) var(--ease-in-out-quart) both; }
 .mobile-menu-item { opacity: 0; transform: translateY(16px); animation: hero-fade-enter var(--dur-enter) var(--ease-out-expo) forwards; }
-.mobile-menu-closing { animation-duration: var(--dur-menu-close); }
+.menu-delay-1 { animation-delay: calc(var(--delay-menu) * 1); }
+.menu-delay-2 { animation-delay: calc(var(--delay-menu) * 2); }
+.menu-delay-3 { animation-delay: calc(var(--delay-menu) * 3); }
+.menu-delay-4 { animation-delay: calc(var(--delay-menu) * 4); }
+.menu-delay-5 { animation-delay: calc(var(--delay-menu) * 5); }
+.menu-delay-6 { animation-delay: calc(var(--delay-menu) * 6); }
+.menu-delay-7 { animation-delay: calc(var(--delay-menu) * 7); }
+.menu-delay-8 { animation-delay: calc(var(--delay-menu) * 8); }
+.menu-delay-9 { animation-delay: calc(var(--delay-menu) * 9); }
+.menu-delay-10 { animation-delay: calc(var(--delay-menu) * 10); }
+.menu-delay-11 { animation-delay: calc(var(--delay-menu) * 11); }
+.menu-delay-12 { animation-delay: calc(var(--delay-menu) * 12); }
+.mobile-menu-closing { animation: menu-fade-out var(--dur-menu-close) var(--ease-in-out-quart) both; }
+.mobile-menu-closing .mobile-menu-item { animation: none; opacity: 1; transform: none; }
 .site-header { transition: background-color var(--dur-nav) var(--ease-out-quart), border-color var(--dur-nav) var(--ease-out-quart); }
 .site-header-inner { transition: transform var(--dur-nav) var(--ease-out-quart); }
 .site-header.is-compact .site-header-inner { transform: scaleY(.773); }

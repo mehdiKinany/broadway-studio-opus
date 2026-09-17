@@ -30,6 +30,7 @@ export function SiteHeader() {
     setClosing(true);
     window.setTimeout(() => { setOpen(false); setClosing(false); }, 200);
   };
+  const menuDelay = (index: number) => `menu-delay-${Math.min(index, 12)}`;
   const mainDisciplines = disciplines.filter((item) => item.main);
   const nav = [
     { label: t.nav.home, to: "/" }, { label: t.nav.planning, to: "/planning" },
@@ -54,9 +55,9 @@ export function SiteHeader() {
     </div>
     {open && <div className={`mobile-menu-backdrop fixed inset-x-0 bottom-0 top-[5.5rem] overflow-y-auto bg-surface-deep px-6 py-8 lg:hidden ${closing ? "mobile-menu-closing opacity-0" : ""}`}>
       <nav className="mx-auto flex max-w-xl flex-col" aria-label={t.nav.home}>
-         {nav.map((item, index) => <Link key={item.to} to={item.to} className="mobile-menu-item border-b border-hero-foreground/15 py-4 font-display text-3xl text-hero-foreground hover:text-primary" style={{ animationDelay: `${index * 40}ms` }}>{item.label}</Link>)}
+         {nav.map((item, index) => <Link key={item.to} to={item.to} className={`mobile-menu-item ${menuDelay(index)} border-b border-hero-foreground/15 py-4 font-display text-3xl text-hero-foreground hover:text-primary`}>{item.label}</Link>)}
         <p className="mt-8 text-xs font-semibold uppercase text-primary">{t.nav.disciplines}</p>
-         <div className="mt-3 grid grid-cols-2 gap-x-6">{mainDisciplines.map((item, index) => <Link key={item.slug} to={item.href} className="mobile-menu-item border-b border-hero-foreground/10 py-3 text-sm text-hero-foreground" style={{ animationDelay: `${Math.min(index + nav.length, 12) * 40}ms` }}>{item.name}</Link>)}</div>
+         <div className="mt-3 grid grid-cols-2 gap-x-6">{mainDisciplines.map((item, index) => <Link key={item.slug} to={item.href} className={`mobile-menu-item ${menuDelay(index + nav.length)} border-b border-hero-foreground/10 py-3 text-sm text-hero-foreground`}>{item.name}</Link>)}</div>
         <Button asChild variant="hero" className="mt-8 w-full"><Link to="/demande-dinformations">{t.nav.info}</Link></Button>
       </nav>
     </div>}

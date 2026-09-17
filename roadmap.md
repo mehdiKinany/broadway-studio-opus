@@ -2,4 +2,4 @@
 - [x] Importer les dix photographies réelles fournies
 - [x] Brancher les photos sur l’accueil et les cinq pages concernées
 - [x] Appliquer le système de motion global
-- [ ] Vérifier accessibilité, mobile et performances
+- [x] Vérifier accessibilité, mobile et performances
