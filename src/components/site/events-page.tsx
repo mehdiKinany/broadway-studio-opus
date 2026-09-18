@@ -27,7 +27,7 @@ export function EventsPage() {
 
     <section className="mt-20 bg-muted py-20 lg:py-28"><div className="section-shell"><RevealTitle lines={[t.events.past]} className="text-5xl sm:text-7xl" /><div className="mt-10 grid gap-px bg-border md:grid-cols-2">{past.map((event, index) => <Reveal key={event.id} index={index}><EventCard event={event} /></Reveal>)}</div></div></section>
 
-    <section className="section-shell py-20 lg:py-28"><Reveal><h2 className="font-display text-5xl sm:text-7xl">{t.events.highlights}</h2><ul className="mt-10 border-t fine-rule">{previousHighlights.map((item, index) => <li key={item} className="grid grid-cols-[2.5rem_1fr] border-b fine-rule py-5 text-base sm:text-lg"><span className="text-xs text-muted-foreground">{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ul></Reveal></section>
+    <section className="section-shell py-20 lg:py-28"><Reveal><h2 className="font-display text-5xl sm:text-7xl">{t.events.highlights}</h2><ul className="mt-10 border-t fine-rule">{previousHighlights.map((item) => <li key={item} className="border-b fine-rule py-5 text-base sm:text-lg">{item}</li>)}</ul></Reveal></section>
 
     <section className="bg-primary py-16"><div className="section-shell grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center"><h2 className="font-display max-w-3xl text-5xl sm:text-6xl">{t.events.stayInformed}</h2><div className="flex flex-wrap gap-3"><Button asChild variant="dark" size="lg"><a href={site.social.instagram} target="_blank" rel="noreferrer"><Instagram />{t.events.instagram}</a></Button><Button asChild variant="outline" size="lg"><Link to="/demande-dinformations">{t.events.info}<ArrowRight /></Link></Button></div></div></section>
   </main>;
