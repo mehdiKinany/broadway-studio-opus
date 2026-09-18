@@ -27,6 +27,11 @@ export function SiteHeader() {
     return () => { document.body.style.overflow = previous; };
   }, [open]);
   const closeMenu = () => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setOpen(false);
+      setClosing(false);
+      return;
+    }
     setClosing(true);
   };
   const menuDelay = (index: number) => `menu-delay-${Math.min(index, 15)}`;
@@ -43,7 +48,7 @@ export function SiteHeader() {
          <Link to="/" className="motion-link text-xs font-semibold uppercase text-hero-foreground hover:text-primary">{t.nav.home}</Link>
         <div className="group relative">
            <button className="motion-link flex min-h-11 items-center gap-1 text-xs font-semibold uppercase text-hero-foreground hover:text-primary" aria-haspopup="true">{t.nav.disciplines}<ChevronDown className="size-3.5" /></button>
-          <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 border border-hero-foreground/10 bg-surface-deep p-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+          <div className="invisible absolute left-0 top-full w-64 border border-hero-foreground/10 bg-surface-deep p-2 opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
             {mainDisciplines.map((item) => <Link key={item.slug} to={item.href} className="block px-4 py-3 text-sm text-hero-foreground transition-colors hover:bg-primary hover:text-primary-foreground">{item.name}</Link>)}
           </div>
         </div>
