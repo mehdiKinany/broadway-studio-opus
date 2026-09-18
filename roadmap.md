@@ -13,4 +13,4 @@
 - [x] Construire Broadway Fitness et Anniversaires
 - [x] Construire Qui sommes-nous et la galerie accessible
 - [x] Illustrer le Spring Camp passé sans présenter son ancien tarif comme offre actuelle
-- [ ] Vérifier les sept pages à 375 px et 1440 px
+- [x] Vérifier les sept pages à 375 px et 1440 px
