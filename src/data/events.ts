@@ -1,4 +1,5 @@
 import openDaysPoster from "@/assets/affiche-portes-ouvertes-sept-2026.png.asset.json";
+import springCampPoster from "@/assets/affiche-spring-camp.jpeg.asset.json";
 
 export interface StudioEvent {
   id: string;
@@ -25,7 +26,7 @@ export const events: StudioEvent[] = [
     disciplines: ["Musique", "Chant", "Danse", "Théâtre", "Échecs", "Arts visuels", "Arts martiaux", "Gymnastique"],
   },
   { id: "tournoi-echecs-2026", titre: "Tournoi d’échecs", dateDebut: "2026-05-16", horaire: "15h à 18h", lieu: "Broadway Studio", description: "Compétition stratégique pour jeunes joueurs." },
-  { id: "spring-camp-2026", titre: "Spring Camp", dateDebut: "2026-04-27", dateFin: "2026-05-01", horaire: "", lieu: "Broadway Studio", description: "Stage d’une semaine pour les 4-12 ans : arts & craft, science lab, atelier culinaire, jeux d’équipe, jardinage, théâtre, fun gym, chant et musique." },
+  { id: "spring-camp-2026", titre: "Spring Camp", dateDebut: "2026-04-27", dateFin: "2026-05-01", horaire: "", lieu: "Broadway Studio", description: "Stage d’une semaine pour les 4-12 ans : arts & craft, science lab, atelier culinaire, jeux d’équipe, jardinage, théâtre, fun gym, chant et musique.", affiche: springCampPoster.url },
   { id: "competition-gymnastique-rythmique-2026", titre: "Compétition de gymnastique rythmique", dateDebut: "2026-04-18", horaire: "16h", lieu: "Broadway Studio", description: "Rencontre amicale avec les gymnastes du studio." },
   { id: "passage-grade-judo-2026", titre: "Passage de grade — Judo", dateDebut: "2026-04-18", horaire: "11h", lieu: "Broadway Studio", description: "" },
 ];
