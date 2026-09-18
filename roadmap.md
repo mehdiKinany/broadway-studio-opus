@@ -14,3 +14,10 @@
 - [x] Construire Qui sommes-nous et la galerie accessible
 - [x] Illustrer le Spring Camp passé sans présenter son ancien tarif comme offre actuelle
 - [x] Vérifier les sept pages à 375 px et 1440 px
+
+## Finitions éditoriales et mouvement
+- [x] Supprimer tous les numéros décoratifs des cartes
+- [x] Remplacer les surtitres des disciplines par les données du planning
+- [x] Auditer et compléter les onze exigences de mouvement
+- [x] Vérifier et corriger les sept pages éditoriales et la galerie
+- [x] Valider à 375 px et 1440 px
