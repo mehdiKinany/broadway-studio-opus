@@ -11,7 +11,7 @@ export const fr = {
     disciplines: "Découvrir les disciplines", planning: "Voir le planning", info: "Demander des informations",
     imageAlt: "Bâtiment de Broadway Studio à Ville Verte, Bouskoura",
   },
-  trust: ["Ville Verte — Bouskoura", "Enfants", "Ados", "Adultes", "9 univers artistiques & sportifs", "Depuis 2022"],
+  trust: ["Ville Verte — Bouskoura", "Enfants", "Ados", "Adultes", "9 disciplines + échecs & anniversaires", "Depuis 2022"],
   event: {
     eyebrow: "À vos agendas", title: "JOURNÉES PORTES OUVERTES",
     date: "Samedi 19 et dimanche 20 septembre 2026", time: "De 10h00 à 17h00", place: "Au studio",
@@ -32,6 +32,23 @@ export const fr = {
   schedule: {
     eyebrow: "Cette semaine", title: "LE STUDIO VOUS ACCUEILLE.", subtitle: "Horaires d’ouverture",
     open: "Ouvert", closed: "Fermé", today: "Aujourd’hui", link: "Consulter le planning",
+  },
+  planning: {
+    eyebrow: "Saison 2026-2027", title: "LE PLANNING DES COURS", subtitle: "Cours collectifs",
+    filters: "Filtrer le planning", day: "Jour", discipline: "Discipline", audience: "Public",
+    allDays: "Tous les jours", allDisciplines: "Toutes les disciplines", allAudiences: "Tous les publics",
+    children: "Enfants", teens: "Ados", adults: "Adultes", today: "Aujourd’hui", reset: "Réinitialiser",
+    oneResult: "1 cours", results: "cours", empty: "Aucun cours ne correspond à ces filtres.",
+    confirm: "horaire à confirmer", musicTitle: "Cours de musique sur réservation",
+    info: "Demander des informations", notice: "Le planning peut évoluer en cours de saison. Pour toute confirmation, contactez le studio.",
+    disciplineNames: { danse: "Danse", gymnastique: "Gymnastique", "arts-martiaux": "Arts martiaux", theatre: "Théâtre", "arts-plastiques": "Arts plastiques", chant: "Chant", echecs: "Échecs", coran: "Coran" },
+  },
+  events: {
+    eyebrow: "La vie du studio", title: "ÉVÉNEMENTS", upcoming: "À venir", past: "Événements passés",
+    highlights: "Temps forts des saisons précédentes", posterAlt: "Affiche officielle des Journées Portes Ouvertes Broadway Studio des 19 et 20 septembre 2026",
+    date: "Date", time: "Horaire", place: "Lieu", disciplines: "Disciplines présentées",
+    stayInformed: "Vous souhaitez être informé de nos prochains événements ?", instagram: "Suivre sur Instagram", info: "Demander des informations",
+    noUpcoming: "Aucun événement daté à venir n’est annoncé pour le moment.",
   },
   testimonials: {
     eyebrow: "Vos expériences", title: "CE SONT EUX QUI EN PARLENT LE MIEUX",
