@@ -7,4 +7,4 @@
 - [x] Construire la page Planning mobile-first avec filtres cumulables
 - [x] Construire la page Événements avec statuts automatiques et données structurées
 - [x] Corriger le bandeau et vérifier les cinq cartes photographiques
-- [ ] Valider les deux pages sur mobile et bureau
+- [x] Valider les deux pages sur mobile et bureau

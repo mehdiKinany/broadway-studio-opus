@@ -37,7 +37,7 @@ export const fr = {
     eyebrow: "Saison 2026-2027", title: "LE PLANNING DES COURS", subtitle: "Cours collectifs",
     filters: "Filtrer le planning", day: "Jour", discipline: "Discipline", audience: "Public",
     allDays: "Tous les jours", allDisciplines: "Toutes les disciplines", allAudiences: "Tous les publics",
-    children: "Enfants", teens: "Ados", adults: "Adultes", reset: "Réinitialiser",
+    children: "Enfants", teens: "Ados", adults: "Adultes", today: "Aujourd’hui", reset: "Réinitialiser",
     oneResult: "1 cours", results: "cours", empty: "Aucun cours ne correspond à ces filtres.",
     confirm: "horaire à confirmer", musicTitle: "Cours de musique sur réservation",
     info: "Demander des informations", notice: "Le planning peut évoluer en cours de saison. Pour toute confirmation, contactez le studio.",
