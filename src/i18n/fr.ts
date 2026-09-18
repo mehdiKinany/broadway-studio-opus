@@ -128,7 +128,7 @@ export const fr = {
     eyebrow: "Une fête pensée comme un tout", title: "ANNIVERSAIRES", intro: "L’anniversaire de votre enfant est un jour spécial. Broadway Studio vous propose une formule clé en main pour vous libérer de l’organisation et en faire un moment mémorable : activités artistiques et ludiques variées, jeux organisés, animation entraînante et goûter d’anniversaire au gré de ses envies.", gallery: "Un anniversaire au studio", cta: "Demander une formule anniversaire",
   },
   aboutPage: {
-    eyebrow: "Broadway Studio · depuis 2022", title: "PLUS QU’UN STUDIO, UN LIEU POUR S’EXPRIMER.", intro: "Centre d’éveil artistique et sportif de la Ville Verte, Broadway Studio accueille les enfants, les adolescents, les adultes et les seniors.", sections: [
+    eyebrow: "Broadway Studio · depuis 2022", title: "PLUS QU’UN STUDIO, UN LIEU POUR S’EXPRIMER.", titleLines: ["PLUS QU’UN STUDIO,", "UN LIEU POUR S’EXPRIMER."], intro: "Centre d’éveil artistique et sportif de la Ville Verte, Broadway Studio accueille les enfants, les adolescents, les adultes et les seniors.", sections: [
       { title: "UNE PÉDAGOGIE ATTENTIVE", text: "Une équipe pédagogique qualifiée accompagne chacun dans une approche fondée sur le plaisir de s’exprimer, la confiance en soi et le développement personnel." },
       { title: "UN LIEU PENSÉ POUR LA PRATIQUE", text: "Le site architectural a été entièrement conçu autour des activités artistiques et sportives." },
       { title: "OUVERT À TOUS LES ÂGES", text: "Un lieu ouvert aux enfants, aux adolescents, aux adultes et aux seniors." },
