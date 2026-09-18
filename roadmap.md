@@ -8,9 +8,9 @@
 - [x] Construire la page Événements avec statuts automatiques et données structurées
 - [x] Corriger le bandeau et vérifier les cinq cartes photographiques
 - [x] Valider les deux pages sur mobile et bureau
-- [ ] Importer et documenter les dix nouveaux médias réels
-- [ ] Construire Chant, Arts plastiques et Cheerleading
-- [ ] Construire Broadway Fitness et Anniversaires
-- [ ] Construire Qui sommes-nous et la galerie accessible
-- [ ] Illustrer le Spring Camp passé sans présenter son ancien tarif comme offre actuelle
+- [x] Importer et documenter les dix nouveaux médias réels
+- [x] Construire Chant, Arts plastiques et Cheerleading
+- [x] Construire Broadway Fitness et Anniversaires
+- [x] Construire Qui sommes-nous et la galerie accessible
+- [x] Illustrer le Spring Camp passé sans présenter son ancien tarif comme offre actuelle
 - [ ] Vérifier les sept pages à 375 px et 1440 px
