@@ -247,6 +247,7 @@
 .testimonial-enter { animation: hero-fade-enter var(--dur-enter) var(--ease-out-quart) both; }
 .testimonial-snap { scrollbar-width: none; }
 .testimonial-snap::-webkit-scrollbar { display: none; }
+.gallery-media { transition: transform var(--dur-image) var(--ease-out-quart); }
 @media (min-width: 1024px) { .hero-parallax { transform: translate3d(0, var(--parallax-y, 0), 0); } }
 
 @media (hover: hover) and (pointer: fine) {
@@ -254,6 +255,7 @@
   .discipline-card:hover .discipline-card-overlay { opacity: .35; }
   .discipline-card:hover .discipline-card-name { transform: translateY(-4px); }
   .discipline-card:hover .discipline-card-rule { transform: scaleX(1); }
+  .group:hover .gallery-media { transform: scale(1.02); }
 }
 
 @media (prefers-reduced-motion: reduce) {
