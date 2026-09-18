@@ -8,9 +8,20 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Broadway Studio — Centre artistique et sportif à Bouskoura" },
-      { name: "description", content: "Broadway Studio, centre artistique et sportif à Ville Verte, Bouskoura : musique, chant, danse, gymnastique, arts martiaux, arts plastiques, théâtre, cheerleading et fitness." },
-      { property: "og:title", content: "Broadway Studio — Centre artistique et sportif à Bouskoura" },
-      { property: "og:description", content: "Un lieu où enfants, adolescents et adultes développent leur créativité, leur confiance et leur talent." },
+      {
+        name: "description",
+        content:
+          "Broadway Studio, centre artistique et sportif à Ville Verte, Bouskoura : musique, chant, danse, gymnastique, arts martiaux, arts plastiques, théâtre, cheerleading et fitness.",
+      },
+      {
+        property: "og:title",
+        content: "Broadway Studio — Centre artistique et sportif à Bouskoura",
+      },
+      {
+        property: "og:description",
+        content:
+          "Un lieu où enfants, adolescents et adultes développent leur créativité, leur confiance et leur talent.",
+      },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },

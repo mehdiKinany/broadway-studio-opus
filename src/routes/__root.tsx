@@ -17,6 +17,7 @@ import { SiteFooter } from "@/components/site/site-footer";
 import { MobileActionBar } from "@/components/site/mobile-action-bar";
 import { useT } from "@/hooks/use-t";
 import { Button } from "@/components/ui/button";
+import { organizationJsonLdString } from "@/lib/structured-data";
 
 function NotFoundComponent() {
   const t = useT();
@@ -25,9 +26,7 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-foreground">{t.notFound.title}</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          {t.notFound.text}
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">{t.notFound.text}</p>
         <div className="mt-6">
           <Link
             to="/"
@@ -52,12 +51,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-dvh items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          {t.error.title}
-        </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          {t.error.text}
-        </p>
+        <h1 className="text-xl font-semibold tracking-tight text-foreground">{t.error.title}</h1>
+        <p className="mt-2 text-sm text-muted-foreground">{t.error.text}</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <Button
             onClick={() => {
@@ -96,8 +91,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.png", type: "image/png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap",
+      },
     ],
+    scripts: [{ type: "application/ld+json", children: organizationJsonLdString }],
   }),
   shellComponent: RootShell,
   component: RootComponent,
@@ -123,12 +122,16 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   const pathname = useRouterState({ select: (state) => state.location.pathname });
 
-  useLayoutEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>
       <SiteHeader />
-       <div key={pathname} className="route-transition"><Outlet /></div>
+      <div key={pathname} className="route-transition">
+        <Outlet />
+      </div>
       <SiteFooter />
       <MobileActionBar />
     </QueryClientProvider>
