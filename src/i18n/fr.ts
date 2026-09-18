@@ -48,7 +48,7 @@ export const fr = {
     highlights: "Temps forts des saisons précédentes", posterAlt: "Affiche officielle des Journées Portes Ouvertes Broadway Studio des 19 et 20 septembre 2026",
     date: "Date", time: "Horaire", place: "Lieu", disciplines: "Disciplines présentées",
     stayInformed: "Vous souhaitez être informé de nos prochains événements ?", instagram: "Suivre sur Instagram", info: "Demander des informations",
-    noUpcoming: "Aucun événement daté à venir n’est annoncé pour le moment.",
+    noUpcoming: "Aucun événement daté à venir n’est annoncé pour le moment.", pastPosterAlt: "Affiche officielle du Spring Camp 2026, événement passé de Broadway Studio",
   },
   testimonials: {
     eyebrow: "Vos expériences", title: "CE SONT EUX QUI EN PARLENT LE MIEUX",
@@ -85,7 +85,57 @@ export const fr = {
       { alt: "Deux pratiquants en tenue blanche pendant un exercice sur un tapis jaune devant le logo Broadway Studio", caption: "Cours d’arts martiaux à Broadway Studio" },
       { alt: "Enfant travaillant un coup de pied de kick-boxing avec son coach", caption: "Cours de kick-boxing avec un coach" },
     ],
-    theatre: [{ alt: "Troupe d’enfants en costume jouant ensemble sur une scène de théâtre", caption: "Jeunes comédiens en représentation sur scène" }],
+    theatre: [
+      { alt: "Troupe d’enfants en costume jouant ensemble sur une scène de théâtre", caption: "Jeunes comédiens en représentation sur scène" },
+      { alt: "Jeunes comédiens réunis sur scène sous des lumières colorées pendant un spectacle", caption: "Spectacle de théâtre" },
+    ],
+    "arts-plastiques": [
+      { alt: "Peintures de paysages réalisées par des élèves sur une table d’atelier", caption: "Peintures réalisées par les élèves" },
+      { alt: "Affiche officielle de l’atelier Bandes Dessinées et Mangas encadré par JBARA", caption: "Atelier BD & Mangas" },
+    ],
+    anniversaires: [
+      { alt: "Enfants assis devant Broadway Studio au milieu de bulles géantes", caption: "Animation de bulles géantes" },
+      { alt: "Enfants peignant des assiettes autour d’une table pendant un anniversaire", caption: "Atelier peinture sur assiettes" },
+      { alt: "T-shirt blanc personnalisé avec le prénom Maya et décoré de couleurs", caption: "T-shirt personnalisé" },
+      { alt: "Enfant participant à un atelier créatif autour d’une table pendant un anniversaire", caption: "Atelier créatif" },
+      { alt: "Décoration Happy Birthday et animation d’assiettes tournantes dans le studio", caption: "Décoration d’anniversaire au studio" },
+    ],
+  },
+  chantPage: {
+    eyebrow: "La voix comme instrument", title: "CHANT", intro: "Nos cours de chant permettent d’acquérir les fondamentaux et les techniques du chant tout en développant des qualités de contrôle de soi, de mémoire, d’interprétation et d’improvisation.", languages: "Les cours, individuels ou collectifs, sont proposés en français et en anglais.", program: "Cours au planning", modern: "Chant moderne", modernPublic: "9-12 ans et Ados · samedi", choir: "Chorale orientale", choirPublic: "Adultes · mercredi", planning: "Voir le planning du chant", info: "Demander des informations",
+  },
+  visualArtsPage: {
+    eyebrow: "Observer, composer, créer", title: "ARTS PLASTIQUES", intro: "Ouverts aux débutants comme aux initiés, nos cours de dessin académique et de peinture se déroulent en petits groupes, avec un coaching individualisé.", detail: "Ils permettent l’acquisition progressive des bases du dessin académique, ainsi qu’une initiation ou un perfectionnement à l’équilibre des couleurs et aux règles de composition.", workshops: "Les ateliers", mangaTitle: "Atelier BD & Mangas", mangaText: "L’atelier BD & Mangas est encadré par JBARA.", info: "Demander des informations",
+    items: [
+      { name: "Arts & Créations", audience: "4-6 ans" },
+      { name: "Urban Art", audience: "7-10 ans et Pré-ados / Ados" },
+      { name: "Dessin académique & peinture", audience: "7-10 ans et Pré-ados / Ados" },
+      { name: "Atelier BD & Mangas", audience: "" },
+    ],
+  },
+  cheerPage: {
+    eyebrow: "Discipline collective", title: "CHEERLEADING", intro: "Le cheerleading mêle chorégraphie, acrobatie et synchronisation. Cette pratique collective développe l’esprit d’équipe, la confiance et la coordination.", noticeTitle: "Disponibilité", notice: "Cette discipline ne figure pas au planning de la saison en cours. Contactez-nous pour connaître sa disponibilité.", info: "Demander des informations",
+  },
+  fitnessPage: {
+    eyebrow: "Un espace réservé aux femmes · Ville Verte, Bouskoura", title: "BROADWAY FITNESS", signature: "100 % FEMMES", intro: "Trois familles de pratiques pour se renforcer, bouger avec plaisir et retrouver son équilibre.", scheduleNotice: "Le planning Fitness n’a pas encore été communiqué et ne figure pas dans le planning des cours collectifs.", cta: "Demander le planning Fitness",
+    families: [
+      { title: "RENFORCEMENT & CARDIO", text: "Se renforcer musculairement aide à se tonifier, à améliorer sa posture et à renforcer son capital osseux.", classes: ["Body Sculpt", "CAF", "TBC", "Circuit Training", "Functional Training"] },
+      { title: "DANCE & FUN FITNESS", text: "Ni tout à fait danse, ni tout à fait fitness : un entraînement complet et résolument festif, sur des rythmes funk, latino et afro.", classes: ["Zumba", "Chaabi Kaada", "Danse orientale", "Step", "Afro Dance"] },
+      { title: "STRETCH & BALANCE", text: "Détendre ses muscles, son corps et son esprit, et gagner en souplesse et en force par des méthodes douces mais efficaces. Pour les débutantes comme pour les sportives.", classes: ["Pilates", "Balance", "Tai Chi", "Yoga"] },
+    ],
+  },
+  birthdayPage: {
+    eyebrow: "Une fête pensée comme un tout", title: "ANNIVERSAIRES", intro: "L’anniversaire de votre enfant est un jour spécial. Broadway Studio vous propose une formule clé en main pour vous libérer de l’organisation et en faire un moment mémorable : activités artistiques et ludiques variées, jeux organisés, animation entraînante et goûter d’anniversaire au gré de ses envies.", gallery: "Un anniversaire au studio", cta: "Demander une formule anniversaire",
+  },
+  aboutPage: {
+    eyebrow: "Broadway Studio · depuis 2022", title: "PLUS QU’UN STUDIO, UN LIEU POUR S’EXPRIMER.", titleLines: ["PLUS QU’UN STUDIO,", "UN LIEU POUR S’EXPRIMER."], intro: "Centre d’éveil artistique et sportif de la Ville Verte, Broadway Studio accueille les enfants, les adolescents, les adultes et les seniors.", sections: [
+      { title: "UNE PÉDAGOGIE ATTENTIVE", text: "Une équipe pédagogique qualifiée accompagne chacun dans une approche fondée sur le plaisir de s’exprimer, la confiance en soi et le développement personnel." },
+      { title: "UN LIEU PENSÉ POUR LA PRATIQUE", text: "Le site architectural a été entièrement conçu autour des activités artistiques et sportives." },
+      { title: "OUVERT À TOUS LES ÂGES", text: "Un lieu ouvert aux enfants, aux adolescents, aux adultes et aux seniors." },
+    ], credibility: "Repères vérifiés", rhythmics: "L’enseignante de gymnastique rythmique est diplômée et ancienne membre de l’équipe nationale d’Ukraine.", piano: "Les cours de piano se donnent sur piano acoustique.", rating: "4,5 ★ sur 28 avis Google", google: "Voir la fiche Google", exteriorAlt: "Façade de Broadway Studio à Ville Verte, Bouskoura", registrationAlt: "Façade de Broadway Studio photographiée pour la campagne d’inscriptions 2025-2026",
+  },
+  galleryPage: {
+    eyebrow: "La vie du studio", title: "GALERIE", intro: "Des photos prises au studio, lors des cours, des spectacles et des anniversaires.", all: "Tout", filters: "Filtrer la galerie", categories: { studio: "Le studio", musique: "Musique", danse: "Danse", gymnastique: "Gymnastique", "arts-martiaux": "Arts martiaux", theatre: "Théâtre", "arts-plastiques": "Arts plastiques", anniversaires: "Anniversaires" }, open: "Ouvrir l’image", close: "Fermer la visionneuse", previous: "Image précédente", next: "Image suivante", imageCount: "image sur",
   },
   pages: {
     intro: "Cette page sera développée prochainement.", back: "Retour à l’accueil",
