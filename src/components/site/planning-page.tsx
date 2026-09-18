@@ -3,7 +3,6 @@ import { CalendarDays, Clock3, Music2, Phone } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Reveal, RevealTitle } from "@/components/site/motion";
-import { disciplines } from "@/data/disciplines";
 import { JOURS, NOTE_MUSIQUE, schedule, type Creneau, type Jour } from "@/data/schedule";
 import { phoneHref, site } from "@/data/site";
 import { currentScheduleDay, matchesPublic, type PublicFilter } from "@/lib/schedule";
