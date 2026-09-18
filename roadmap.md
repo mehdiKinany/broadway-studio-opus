@@ -16,8 +16,8 @@
 - [x] Vérifier les sept pages à 375 px et 1440 px
 
 ## Finitions éditoriales et mouvement
-- [ ] Supprimer tous les numéros décoratifs des cartes
-- [ ] Remplacer les surtitres des disciplines par les données du planning
-- [ ] Auditer et compléter les onze exigences de mouvement
+- [x] Supprimer tous les numéros décoratifs des cartes
+- [x] Remplacer les surtitres des disciplines par les données du planning
+- [x] Auditer et compléter les onze exigences de mouvement
 - [ ] Vérifier et corriger les sept pages éditoriales et la galerie
-- [ ] Valider à 375 px et 1440 px
+- [x] Valider à 375 px et 1440 px
