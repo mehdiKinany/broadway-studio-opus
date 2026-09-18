@@ -214,7 +214,7 @@
 .motion-link:hover { background-size: 100% 1px; }
 .motion-button { transition: opacity var(--dur-micro) var(--ease-out-quart), transform var(--dur-micro) var(--ease-out-quart); }
 .motion-button:active { transform: scale(.98); }
-.motion-button:hover svg { transform: translateX(3px); transition: transform var(--dur-micro) var(--ease-out-quart); }
+.motion-button:hover svg.lucide-arrow-right { transform: translateX(3px); transition: transform var(--dur-micro) var(--ease-out-quart); }
 .hero-image { animation: hero-image-enter var(--dur-hero-image) var(--ease-out-expo) both; will-change: transform; }
 .hero-title-line { display: block; animation: hero-mask-enter var(--dur-title) var(--ease-out-expo) both; will-change: transform, clip-path; }
 .hero-title-line + .hero-title-line { animation-delay: var(--delay-hero-line); }

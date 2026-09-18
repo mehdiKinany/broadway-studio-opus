@@ -45,11 +45,11 @@ export function HomePage() {
   }, []);
   return <main>
     <section className="relative flex min-h-[92svh] items-end overflow-hidden bg-surface-deep pb-14 pt-32 text-hero-foreground sm:pb-20 lg:min-h-[94svh] lg:pb-24">
-      <div ref={heroImageRef} className="hero-parallax absolute inset-0"><img src={heroAsset.url} alt={t.hero.imageAlt} className="hero-image size-full object-cover" /></div>
+       <div ref={heroImageRef} className="hero-parallax absolute inset-0"><img src={heroAsset.url} alt={t.hero.imageAlt} onAnimationEnd={(event) => { event.currentTarget.style.willChange = "auto"; }} className="hero-image size-full object-cover" /></div>
       <div className="absolute inset-0 bg-surface-deep/65" />
       <div className="section-shell relative z-10">
         <p className="mb-5 text-xs font-semibold uppercase text-primary">{site.baseline}</p>
-         <h1 className="editorial-title max-w-5xl text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">{t.hero.titleLines.map((line) => <span key={line} className="hero-title-line">{line}</span>)}</h1>
+         <h1 className="editorial-title max-w-5xl text-5xl sm:text-7xl lg:text-8xl xl:text-9xl">{t.hero.titleLines.map((line) => <span key={line} onAnimationEnd={(event) => { event.currentTarget.style.willChange = "auto"; }} className="hero-title-line">{line}</span>)}</h1>
         <div className="mt-7 grid gap-7 border-t border-hero-foreground/35 pt-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <p className="hero-subtitle max-w-2xl text-base leading-7 text-hero-foreground/85 sm:text-lg">{t.hero.subtitle}</p>
           <div className="hero-actions flex flex-wrap gap-3"><Button asChild variant="hero" size="lg"><a href="#disciplines">{t.hero.disciplines}<ArrowRight /></a></Button><Button asChild variant="heroOutline" size="lg"><Link to="/planning">{t.hero.planning}</Link></Button></div>
