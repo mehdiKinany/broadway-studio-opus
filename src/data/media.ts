@@ -17,7 +17,6 @@ import birthdayShirtAsset from "@/assets/anniversaire-tshirt-personnalise.jpeg.a
 import birthdayCreativeAsset from "@/assets/anniversaire-atelier-creatif.jpeg.asset.json";
 import birthdayDecorAsset from "@/assets/anniversaire-decoration.jpeg.asset.json";
 import exteriorAsset from "@/assets/studio-exterieur.jpg.asset.json";
-import exteriorRegistrationAsset from "@/assets/studio-exterieur-inscriptions.jpg.asset.json";
 import signAsset from "@/assets/enseigne-lumineuse.jpeg.asset.json";
 import openDaysAsset from "@/assets/affiche-portes-ouvertes-sept-2026.png.asset.json";
 
@@ -48,7 +47,6 @@ export type DisciplineMediaSlug = keyof typeof disciplineMedia;
 export const galleryMedia: GalleryMedia[] = [
   { id: "studio-exterieur", src: exteriorAsset.url, category: "studio", width: 1920, height: 818, alt: "Façade de Broadway Studio à Ville Verte, Bouskoura", caption: "Broadway Studio à Ville Verte" },
   { id: "enseigne-lumineuse", src: signAsset.url, category: "studio", width: 1024, height: 934, alt: "Enseigne lumineuse Broadway Studio dans les locaux de Ville Verte", caption: "L’enseigne Broadway Studio" },
-  { id: "studio-inscriptions", src: exteriorRegistrationAsset.url, category: "studio", width: 1920, height: 1084, alt: "Façade de Broadway Studio photographiée pour la campagne d’inscriptions 2025-2026", caption: "La façade du studio" },
   { id: "portes-ouvertes", src: openDaysAsset.url, category: "studio", width: 1771, height: 888, alt: "Affiche officielle des Journées Portes Ouvertes Broadway Studio des 19 et 20 septembre 2026", caption: "Journées Portes Ouvertes 2026" },
   { id: "piano", src: pianoAsset.url, category: "musique", width: 768, height: 1024, alt: "Enfant jouant sur un piano acoustique pendant un cours à Broadway Studio", caption: "Cours de piano acoustique" },
   { id: "guitare", src: guitarAsset.url, category: "musique", width: 1024, height: 768, alt: "Deux élèves et leur professeur pendant un cours collectif de guitare dans la salle de musique", caption: "Cours collectif de guitare" },

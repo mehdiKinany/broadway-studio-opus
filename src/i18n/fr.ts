@@ -352,8 +352,6 @@ export const fr = {
     rating: "4,5 ★ sur 28 avis Google",
     google: "Voir la fiche Google",
     exteriorAlt: "Façade de Broadway Studio à Ville Verte, Bouskoura",
-    registrationAlt:
-      "Façade de Broadway Studio photographiée pour la campagne d’inscriptions 2025-2026",
   },
   galleryPage: {
     eyebrow: "La vie du studio",
@@ -384,10 +382,6 @@ export const fr = {
       "enseigne-lumineuse": {
         alt: "Enseigne lumineuse Broadway Studio dans les locaux de Ville Verte",
         caption: "L’enseigne Broadway Studio",
-      },
-      "studio-inscriptions": {
-        alt: "Façade de Broadway Studio photographiée pour la campagne d’inscriptions 2025-2026",
-        caption: "La façade du studio",
       },
       "portes-ouvertes": {
         alt: "Affiche officielle des Journées Portes Ouvertes Broadway Studio des 19 et 20 septembre 2026",
