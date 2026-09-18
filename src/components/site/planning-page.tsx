@@ -62,7 +62,15 @@ export function PlanningPage() {
 function Filter({ label, children }: { label: string; children: React.ReactNode }) { return <label className="grid gap-2 text-sm font-semibold">{label}{children}</label>; }
 function capitalize(value: string) { return value.charAt(0).toUpperCase() + value.slice(1); }
 function disciplineName(slug: string, names: Record<string, string>) { return names[slug] ?? capitalize(slug.replaceAll("-", " ")); }
-function disciplineHref(slug: string) { return disciplines.find((item) => item.slug === slug && item.href !== "/planning")?.href; }
+const disciplineRoutes = {
+  danse: "/danse",
+  gymnastique: "/gymnastique",
+  "arts-martiaux": "/arts-martiaux",
+  theatre: "/theatre",
+  "arts-plastiques": "/arts-plastiques",
+  chant: "/chant",
+} as const;
+function disciplineHref(slug: string) { return disciplineRoutes[slug as keyof typeof disciplineRoutes]; }
 function SlotCard({ slot, names, confirm, mobile = false }: { slot: Creneau; names: Record<string, string>; confirm: string; mobile?: boolean }) {
   const href = disciplineHref(slot.discipline);
   const label = disciplineName(slot.discipline, names);
